@@ -1,0 +1,22 @@
+<ion-header class="recuperarheader" [translucent]="false"> 
+  <h1 class="titulo ion-text-center">VIVO DUOC</h1>
+  <ion-img class="hl1" src="https://pngimg.com/uploads/Half-Life/Half-Life_PNG76.png"></ion-img>
+</ion-header>
+<ion-content color="rosado">
+<ion-card color="amarillo">
+  <ion-card-header>
+    <ion-card-title>
+      <h1 class="fuente ion-text-center">Recuperar Contraseña</h1>
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <form (ngSubmit)="recuperarContrasena()">
+      <ion-item color="amarillo">
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+      </ion-item>
+      <ion-button class="fuente" expand="block" type="submit" color="boton">Enviar Recuperación</ion-button>
+    </form>
+  </ion-card-content>
+  </ion-card>
+
