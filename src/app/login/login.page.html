@@ -11,14 +11,14 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item color="amarillo">
-        <ion-label position="floating">Usuario</ion-label>
-        <ion-input typer="text"></ion-input>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input [(ngModel)]="email" typer="text"></ion-input>
       </ion-item>
       <ion-item color="amarillo">
         <ion-label position="floating">Contraseña</ion-label>
-        <ion-input type="password" ></ion-input>
+        <ion-input [(ngModel)]="password" type="password"></ion-input>
       </ion-item>
-      <ion-button class="fuente" expand="block" color="boton">Ingresar</ion-button>
+      <ion-button (click)="ingresar()" class="fuente" expand="block" color="boton">Ingresar</ion-button>
       <br>
       <ion-button (click)="goToRecuperarContrasena()" class="fuente" expand="block" color="boton">¿HAS OLVIDADO TU CONTRASEÑA?</ion-button>
     </ion-card-content>
