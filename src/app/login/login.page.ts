@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ModalController } from '@ionic/angular';
-import { ToastController } from '@ionic/angular';
+import { AuthService } from '../auth/auth.service';
+import { ModalController, ToastController } from '@ionic/angular';
 import { RecuperarContrasenaComponent } from '../recuperar-contrasena/recuperar-contrasena.component';
 
 @Component({
@@ -9,16 +9,36 @@ import { RecuperarContrasenaComponent } from '../recuperar-contrasena/recuperar-
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class LoginPage {
+  email: string = '';
+  password: string = '';
 
-  email: string='';
-  password: string='';
+  constructor(private router: Router, private authService: AuthService, private toastController: ToastController, private modalController: ModalController) { }
 
-  constructor(private router: Router, private toastController: ToastController, private modalController: ModalController) { }
-
-  ngOnInit() {
+  async login() {
+    if (!this.email && !this.password) {
+      this.showToast('Por favor, ingresa el email y la contraseña');
+    } else if (!this.email) {
+      this.showToast('Por favor, ingresa el email');
+    } else if (!this.password) {
+      this.showToast('Por favor, ingresa la contraseña');
+    } else {
+      this.authService.login(this.email, this.password).subscribe(user => {
+        if (user) {
+          if (user.email.endsWith('@duocuc.cl')) {
+            this.router.navigate(['/home-alumno']); 
+          } else if (user.email.endsWith('@profesor.duocuc.cl')) {
+            this.router.navigate(['/home']); 
+          } else if (user.email === 'admin@admin.cl') {
+            this.router.navigate(['/home-admin']); 
+          }
+        } else {
+          this.showToast('Credenciales incorrectas'); 
+        }
+      });
+    }
   }
-  
+
   async showToast(message: string) {
     const toast = await this.toastController.create({
       message: message,
@@ -28,18 +48,6 @@ export class LoginPage implements OnInit {
     toast.present();
   }
 
-  ingresar(){
-    if (!this.email && !this.password) {
-      this.showToast('Por favor, ingresa el email y la contraseña');
-    } else if (!this.email) {
-      this.showToast('Por favor, ingresa el email');
-    } else if (!this.password) {
-      this.showToast('Por favor, ingresa la contraseña');
-    } else {
-      // Si los campos están completos, navegamos al home
-      this.router.navigate(['/home']);
-    }
-  }
 
 
   async goToRecuperarContrasena() {

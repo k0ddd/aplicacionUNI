@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recuperar-contrasena',
@@ -9,11 +10,11 @@ import { AlertController } from '@ionic/angular';
 export class RecuperarContrasenaComponent  implements OnInit {
   email: string = '';
 
-  constructor(private alertController: AlertController) { }
+  constructor(private alertController: AlertController, private router: Router) { }
 
   ngOnInit() {}
   async recuperarContrasena() {
-    if (this.email){
+    if (this.email.endsWith('@profesor.duocuc.cl') || this.email.endsWith('@duocuc.cl')){
       const alert = await this.alertController.create({
         header: 'Exito',
         message: 'se ha enviado correctamente el correo para recuperar tu contraseña',
@@ -31,7 +32,13 @@ export class RecuperarContrasenaComponent  implements OnInit {
       await alert.present();
     }
   }
-
+  // Método para regresar al login
+  goToLogin() {
+    console.log('Navegando a la página de inicio de sesión');
+    this.router.navigateByUrl('/login');
 }
+}
+
+
 
 
