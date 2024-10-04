@@ -32,13 +32,8 @@ export class RecuperarContrasenaComponent  implements OnInit {
       await alert.present();
     }
   }
-  // Método para regresar al login
-  goToLogin() {
-    console.log('Navegando a la página de inicio de sesión');
-    this.router.navigateByUrl('/login');
-}
-}
 
+}
 
 
 
