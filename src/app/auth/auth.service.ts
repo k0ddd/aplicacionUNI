@@ -9,8 +9,9 @@ import { catchError, map } from 'rxjs/operators';
 
 export class AuthService {
   private authTokenKey="authToken";
-  private loggedIn: boolean = false; // Estado de autenticación
-  private apiUrl = 'http://localhost:3000/users'; // URL de tu API REST
+  private userRoleKey = "userRole"; 
+  private loggedIn: boolean = false; 
+  private apiUrl = 'http://localhost:3000/users'; 
 
   constructor(private http: HttpClient) {}
 
@@ -18,8 +19,17 @@ export class AuthService {
     localStorage.setItem(this.authTokenKey, token);
   }
 
+
+  storeUserRole(role: string): void {
+    localStorage.setItem(this.userRoleKey, role); 
+  }
+
   isAuthenticated():boolean{
     return !!localStorage.getItem(this.authTokenKey);
+  }
+
+  getUserRole(): string | null {
+    return localStorage.getItem(this.userRoleKey); // Devuelve el rol del usuario
   }
 
   isLoggedIn(): boolean {
@@ -32,6 +42,7 @@ export class AuthService {
         const user = users.find(u => u.email === email && u.password === password);
         if (user) {
           this.storeToken(user.token);
+          this.storeUserRole(user.rol);
           this.loggedIn = true; // Cambia el estado de autenticación
           return user; // Devuelve el usuario autenticado
         } else {
@@ -47,5 +58,6 @@ export class AuthService {
 
   removeToken():void{
     localStorage.removeItem(this.authTokenKey);
+    localStorage.removeItem(this.userRoleKey);
   }
 }

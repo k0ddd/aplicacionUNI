@@ -10,10 +10,15 @@ export class AuthGuard implements CanActivate {
 
   canActivate(): boolean {
     if (this.authService.isAuthenticated()) {
-      return true; // Permite el acceso
+      const userRole = this.authService.getUserRole();
+      if (userRole === 'admin') {
+        return true; // Permite el acceso a todas las rutas para administradores
+      }
+      // Aquí puedes agregar lógica para otros roles, si es necesario
+      return true; // Permite el acceso a otros usuarios (ajusta esto según sea necesario)
     } else {
-      this.router.navigate(['/login']); // Redirige a la página de login
-      return false; // Bloquea el acceso
+      this.router.navigate(['/login']); // Redirige al login si no está autenticado
+      return false;
     }
   }
 }
