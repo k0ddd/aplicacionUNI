@@ -8,7 +8,8 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
+    data: { role: 'Profesor'}
   },
   {
     path: '',
@@ -18,7 +19,8 @@ const routes: Routes = [
   {
     path: 'home-alumno',
     loadChildren: () => import('./home-alumno/home-alumno.module').then( m => m.HomeAlumnoPageModule),
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
+    data: { role: 'Alumnno'}
   },
   {
     path: 'login',
@@ -35,7 +37,8 @@ const routes: Routes = [
   {
     path: 'home-admin',
     loadChildren: () => import('./home-admin/home-admin.module').then( m => m.HomeAdminPageModule),
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
+    data: { role: 'Administrador'}
   }
 ];
 

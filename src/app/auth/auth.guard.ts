@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, Router } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router } from '@angular/router';
 import { AuthService } from './auth.service'; // Asegúrate de crear el servicio AuthService
 
 @Injectable({
@@ -8,17 +8,20 @@ import { AuthService } from './auth.service'; // Asegúrate de crear el servicio
 export class AuthGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
 
-  canActivate(): boolean {
+  canActivate(route: ActivatedRouteSnapshot): boolean {
     if (this.authService.isAuthenticated()) {
-      const userRole = this.authService.getUserRole();
-      if (userRole === 'admin') {
-        return true; // Permite el acceso a todas las rutas para administradores
+        const expectedRole = route.data['role'];
+        const userRole = this.authService.getUserRole();
+
+        if (expectedRole === userRole) {
+          return true;
+        } else {
+          this.router.navigate(['/not-found']);
+          return false;
+        }
+      } else {
+        this.router.navigate(['/login']);
+        return false;
       }
-      // Aquí puedes agregar lógica para otros roles, si es necesario
-      return true; // Permite el acceso a otros usuarios (ajusta esto según sea necesario)
-    } else {
-      this.router.navigate(['/login']); // Redirige al login si no está autenticado
-      return false;
     }
   }
-}

@@ -42,7 +42,7 @@ export class AuthService {
         const user = users.find(u => u.email === email && u.password === password);
         if (user) {
           this.storeToken(user.token);
-          this.storeUserRole(user.rol);
+          this.storeUserRole(user.ocupacion);
           this.loggedIn = true; // Cambia el estado de autenticación
           return user; // Devuelve el usuario autenticado
         } else {
