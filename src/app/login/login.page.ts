@@ -29,7 +29,7 @@ export class LoginPage {
             this.router.navigate(['/home-alumno']); 
           } else if (user.email.endsWith('@profesor.duocuc.cl')) {
             this.router.navigate(['/home']); 
-          } else if (user.email === 'admin@admin.cl') {
+          } else if (user.email.endsWith('@admin.cl')) {
             this.router.navigate(['/home-admin']); 
           }
         } else {

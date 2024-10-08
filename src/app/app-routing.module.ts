@@ -20,7 +20,7 @@ const routes: Routes = [
     path: 'home-alumno',
     loadChildren: () => import('./home-alumno/home-alumno.module').then( m => m.HomeAlumnoPageModule),
     canActivate: [AuthGuard],
-    data: { role: 'Alumnno'}
+    data: { role: 'Alumno'}
   },
   {
     path: 'login',
@@ -38,7 +38,7 @@ const routes: Routes = [
     path: 'home-admin',
     loadChildren: () => import('./home-admin/home-admin.module').then( m => m.HomeAdminPageModule),
     canActivate: [AuthGuard],
-    data: { role: 'Administrador'}
+    data: { role: 'Administrator'}
   }
 ];
 
