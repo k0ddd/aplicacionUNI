@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Clases del Profesor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let clase of clases">
+      <ion-label>
+        <h2>{{ clase.nombreClase }}</h2>
+        <p>{{ clase.descripcion }}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="nuevoHistorial.claseId = clase.id">Registrar</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-input [(ngModel)]="nuevoHistorial.fecha" placeholder="Fecha" type="date"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="nuevoHistorial.horaInicio" placeholder="Hora de Inicio" type="time"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="nuevoHistorial.horaFin" placeholder="Hora de Término" type="time"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="registrarClase()">Registrar Clase</ion-button>
+</ion-content>

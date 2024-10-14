@@ -99,6 +99,36 @@
 	    "rol" : "admin"
 	}
   ],
+  "historial": [
+    {
+      "id": 0,
+      "claseId": 1,
+      "fecha": "",
+      "horaInicio": "",
+      "horaFin": ""
+    },
+    {
+      "id": 0,
+      "claseId": 0,
+      "fecha": "2024-10-17",
+      "horaInicio": "",
+      "horaFin": ""
+    },
+    {
+      "id": 0,
+      "claseId": 1,
+      "fecha": "2024-10-17",
+      "horaInicio": "",
+      "horaFin": ""
+    },
+    {
+      "id": 0,
+      "claseId": 4,
+      "fecha": "2024-10-23",
+      "horaInicio": "",
+      "horaFin": ""
+    }
+  ],
   "posts": [
     {
       "userId": 1,
