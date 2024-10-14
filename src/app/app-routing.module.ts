@@ -23,6 +23,12 @@ const routes: Routes = [
     data: { role: 'Alumno'}
   },
   {
+    path: 'home-admin',
+    loadChildren: () => import('./home-admin/home-admin.module').then( m => m.HomeAdminPageModule),
+    canActivate: [AuthGuard],
+    data: { role: 'Administrator'}
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -33,12 +39,6 @@ const routes: Routes = [
   {
     path: '**',
     component: NotFoundPage
-  },
-  {
-    path: 'home-admin',
-    loadChildren: () => import('./home-admin/home-admin.module').then( m => m.HomeAdminPageModule),
-    canActivate: [AuthGuard],
-    data: { role: 'Administrator'}
   }
 ];
 
