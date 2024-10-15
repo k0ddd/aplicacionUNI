@@ -19,7 +19,15 @@ export class AuthService {
     localStorage.setItem(this.authTokenKey, token);
   }
 
-
+  storeUserId(id: number): void {
+    localStorage.setItem('userId', id.toString());
+  }
+  
+  getUserId(): number | null {
+    const userId = localStorage.getItem('userId');
+    return userId ? Number(userId) : null; // Convierte a número, si existe
+  }
+  
   storeUserRole(role: string): void {
     localStorage.setItem(this.userRoleKey, role); 
   }

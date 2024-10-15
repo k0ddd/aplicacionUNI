@@ -1,3 +1,11 @@
-<p>
-  historial-asistencia works!
-</p>
+<ion-content color="rosado">
+  <ion-list>
+    <ion-item *ngFor="let item of historial">
+      <ion-label>
+        <h2>Clase: {{ item.idClase }}</h2>
+        <p>Fecha: {{ item.fecha }} - Hora: {{ item.hora }}</p>
+      </ion-label>
+      <ion-button color="success" (click)="registrarAsistencia(item)">Registrar Asistencia</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

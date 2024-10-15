@@ -102,41 +102,55 @@
   "clases": [
     {
       "id": 1,
+      "idClase": 11,
       "nombreClase": "Producción Musical",
       "descripcion": "Clases de música con YE y de cómo tirar tu carrera por la borda",
       "profesorId": 1
     },
     {
       "id": 2,
+      "idClase": 22,
       "nombreClase": "Literatura Urbana",
       "descripcion": "Viktor Vaughn enseña poesía urbana y sus aplicaciones musicales",
       "profesorId": 2
     },
     {
       "id": 3,
+      "idClase": 33,
       "nombreClase": "Estrategias de Liderazgo",
       "descripcion": "Big Boss te guía en tácticas de liderazgo y estrategia",
       "profesorId": 3
     },
     {
       "id": 4,
+      "idClase": 44,
       "nombreClase": "Exploración Espacial",
       "descripcion": "Major Tom explora los misterios del espacio y su impacto cultural",
       "profesorId": 4
     },
     {
       "id": 5,
+      "idClase": 55,
       "nombreClase": "Diseño de Moda y Cultura",
       "descripcion": "Tyler Okonma te enseña sobre diseño de moda y expresiones culturales",
       "profesorId": 5
     }
   ],
   "historial": [
-
-    
+    {
+      "id": "dd75",
+      "idClase": 11,
+      "fecha": "15-10-2024",
+      "hora": "19:37:36",
+      "profesorId": 1
+    },
+    {
+      "id": "2a09",
+      "idClase": 11,
+      "fecha": "15-10-2024",
+      "hora": "19:39:05",
+      "profesorId": 1
+    }
   ],
-  "historialAlumno": [
-    
-  ]
-  
+  "historialAlumno": []
 }

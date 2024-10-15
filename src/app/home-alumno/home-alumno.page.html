@@ -1,13 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>home-aaaaaaaaaaaaaaa</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">home-alumno</ion-title>
-    </ion-toolbar>
+<ion-header class="homeheader" [translucent]="false"> 
+  <h1 class="titulo ion-text-center">VIVO DUOC</h1>
+  <ion-img class="hl" src="https://pngimg.com/uploads/Half-Life/Half-Life_PNG76.png"></ion-img>
   </ion-header>
+  <ion-toolbar color="rosado">
+    <ion-title class="titulo ion-text-center">Bienvenide Docente</ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="rosado">
+    <ion-segment (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="reglamento-profesor">
+        <ion-icon name="home"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="historial-clases">
+        <ion-icon name="book"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="codigoqr">
+        <ion-icon name="qr-code"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="profesor-perfil">
+        <ion-icon name="school-outline"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+
+<ion-content>
+  <ion-router-outlet></ion-router-outlet>
 </ion-content>
