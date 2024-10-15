@@ -18,14 +18,28 @@
   </ion-list>
 
   <ion-item>
-    <ion-input [(ngModel)]="nuevoHistorial.fecha" placeholder="Fecha" type="date"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input [(ngModel)]="nuevoHistorial.horaInicio" placeholder="Hora de Inicio" type="time"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input [(ngModel)]="nuevoHistorial.horaFin" placeholder="Hora de Término" type="time"></ion-input>
+    <ion-label>Fecha:</ion-label>
+    <ion-datetime 
+      presentation="date" 
+      [(ngModel)]="nuevoHistorial.fecha">
+    </ion-datetime>
   </ion-item>
 
-  <ion-button (click)="registrarClase()">Registrar Clase</ion-button>
+  <ion-item>
+    <ion-label>Hora de Inicio:</ion-label>
+    <ion-datetime 
+      presentation="time" 
+      [(ngModel)]="nuevoHistorial.horaInicio">
+    </ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Hora de Término:</ion-label>
+    <ion-datetime 
+      presentation="time" 
+      [(ngModel)]="nuevoHistorial.horaFin">
+    </ion-datetime>
+  </ion-item>
+
+  <ion-button expand="full" (click)="registrarClase()">Registrar Clase</ion-button>
 </ion-content>

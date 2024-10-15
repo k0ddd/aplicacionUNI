@@ -4,100 +4,132 @@
       "id": 1,
       "name": "Kanye West",
       "email": "kwest@profesor.duocuc.cl",
-	    "password": "123456789",
+      "password": "123456789",
       "rut": "12345678-9",
       "ocupacion": "Profesor",
-	   "rol" : "user"
+      "rol": "user"
     },
     {
       "id": 2,
       "name": "Viktor Vaughn",
       "email": "vvaughn@profesor.duocuc.cl",
       "password": "123456789",
-	    "rut": "22222222-2",
+      "rut": "22222222-2",
       "ocupacion": "Profesor",
-	    "rol" : "user"
+      "rol": "user"
     },
     {
       "id": 3,
       "name": "Big Boss",
       "email": "bb@profesor.duocuc.cl",
-	   "password": "123456789",
+      "password": "123456789",
       "rut": "33333333-3",
       "ocupacion": "Profesor",
-	   "rol" : "user"
+      "rol": "user"
     },
     {
       "id": 4,
       "name": "Major Tom",
       "email": "mtom@profesor.duocuc.cl",
-	   "password": "123456789",
+      "password": "123456789",
       "rut": "44444444-4",
-      "ocupacion": "Profesor", 
-  	  "rol" : "user"
+      "ocupacion": "Profesor",
+      "rol": "user"
     },
     {
       "id": 5,
       "name": "Tyler Okonma",
       "email": "tokonma@profesor.duocuc.cl",
-	    "password": "123456789",
+      "password": "123456789",
       "rut": "55555555-5",
       "ocupacion": "Profesor",
-	    "rol" : "user"
+      "rol": "user"
     },
     {
       "id": 6,
       "name": "Carl Johnson",
       "email": "cj@duocuc.cl",
-	    "password": "123456789",
+      "password": "123456789",
       "rut": "66666666-6",
       "ocupacion": "Alumno",
-	    "rol" : "user"
+      "rol": "user"
     },
     {
       "id": 7,
       "name": "Julian Casablancas",
       "email": "jcasablancas@duocuc.cl",
-	    "password": "123456789",
+      "password": "123456789",
       "rut": "77777777-7",
       "ocupacion": "Alumno",
-	    "rol" : "user"
+      "rol": "user"
     },
     {
       "id": 8,
       "name": "Magdalena Bay",
       "email": "mbay@duocuc.cl",
-	    "password": "123456789",
+      "password": "123456789",
       "rut": "88888888-8",
       "ocupacion": "Alumno",
-	    "rol" : "user"
+      "rol": "user"
     },
     {
       "id": 9,
       "name": "Alain Delon",
       "email": "adelon@duocuc.cl",
-	    "password": "123456789",
+      "password": "123456789",
       "rut": "99999999-9",
       "ocupacion": "Alumno",
-	    "rol" : "user"
+      "rol": "user"
     },
     {
       "id": 10,
       "name": "Jean Pierre-Melville",
       "email": "jpierre@duocuc.cl",
-	    "password": "123456789",
+      "password": "123456789",
       "rut": "10101010-1",
       "ocupacion": "Alumno",
-	   "rol" : "user"
+      "rol": "user"
     },
-	{
-	  "id": 11,
+    {
+      "id": 11,
       "name": "Administrador",
       "email": "admin@admin.cl",
-	    "password": "admin",
+      "password": "admin",
       "ocupacion": "Administrator",
-	    "rol" : "admin"
-	}
+      "rol": "admin"
+    }
+  ],
+  "clases": [
+    {
+      "id": 1,
+      "nombreClase": "Producción Musical",
+      "descripcion": "Clases de música con YE y de cómo tirar tu carrera por la borda",
+      "profesorId": 1
+    },
+    {
+      "id": 2,
+      "nombreClase": "Literatura Urbana",
+      "descripcion": "Viktor Vaughn enseña poesía urbana y sus aplicaciones musicales",
+      "profesorId": 2
+    },
+    {
+      "id": 3,
+      "nombreClase": "Estrategias de Liderazgo",
+      "descripcion": "Big Boss te guía en tácticas de liderazgo y estrategia",
+      "profesorId": 3
+    },
+    {
+      "id": 4,
+      "nombreClase": "Exploración Espacial",
+      "descripcion": "Major Tom explora los misterios del espacio y su impacto cultural",
+      "profesorId": 4
+    },
+    {
+      "id": 5,
+      "nombreClase": "Diseño de Moda y Cultura",
+      "descripcion": "Tyler Okonma te enseña sobre diseño de moda y expresiones culturales",
+      "profesorId": 5
+    }
   ],
   "historial": [
     {
@@ -125,6 +157,48 @@
       "id": 0,
       "claseId": 4,
       "fecha": "2024-10-23",
+      "horaInicio": "",
+      "horaFin": ""
+    },
+    {
+      "id": 0,
+      "claseId": 0,
+      "fecha": "",
+      "horaInicio": "",
+      "horaFin": ""
+    },
+    {
+      "id": 0,
+      "claseId": 0,
+      "fecha": "2024-10-14",
+      "horaInicio": "",
+      "horaFin": ""
+    },
+    {
+      "id": 0,
+      "claseId": 0,
+      "fecha": "",
+      "horaInicio": "",
+      "horaFin": ""
+    },
+    {
+      "id": 0,
+      "claseId": 0,
+      "fecha": "",
+      "horaInicio": "12:03",
+      "horaFin": "12:31"
+    },
+    {
+      "id": 0,
+      "claseId": 0,
+      "fecha": "1222-12-25",
+      "horaInicio": "",
+      "horaFin": ""
+    },
+    {
+      "id": 0,
+      "claseId": 0,
+      "fecha": "2024-10-14T13:00:00",
       "horaInicio": "",
       "horaFin": ""
     }

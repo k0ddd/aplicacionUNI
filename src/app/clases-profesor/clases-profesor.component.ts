@@ -1,6 +1,6 @@
-// src/app/clases-profesor/clases-profesor.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ClasesService } from '../services/clases.service';
+import { AuthService } from '../auth/auth.service';
 import { Clase } from '../models/clase.model';
 import { Historial } from '../models/historial.model';
 
@@ -10,7 +10,7 @@ import { Historial } from '../models/historial.model';
   styleUrls: ['./clases-profesor.component.scss'],
 })
 export class ClasesProfesorComponent implements OnInit {
-  clases: Clase[] = [];
+  clases: Clase[] = []; // Almacena las clases del profesor
   nuevoHistorial: Historial = {
     id: 0,
     claseId: 0,
@@ -19,7 +19,10 @@ export class ClasesProfesorComponent implements OnInit {
     horaFin: '',
   };
 
-  constructor(private clasesService: ClasesService) {}
+  constructor(
+    private clasesService: ClasesService,
+    private authService: AuthService
+  ) {}
 
   ngOnInit() {
     this.cargarClases();
@@ -28,20 +31,30 @@ export class ClasesProfesorComponent implements OnInit {
   cargarClases() {
     this.clasesService.getClases().subscribe(
       (data: Clase[]) => {
-        this.clases = data; // Cargar clases existentes
+        const profesorId = this.authService.getUserId(); // Obtener el ID del profesor autenticado
+        if (profesorId !== null) {
+          this.clases = data.filter(clase => clase.profesorId === profesorId); // Filtrar clases por el ID del profesor
+        }
       },
       (error: any) => console.error(error)
     );
   }
 
   registrarClase() {
-    this.clasesService.addToHistorial(this.nuevoHistorial).subscribe(
-      (data: Historial) => {
-        console.log('Clase registrada:', data);
-        this.resetNuevoHistorial();
-      },
-      (error: any) => console.error(error)
-    );
+    console.log('Datos a registrar:', this.nuevoHistorial); // Para depurar
+
+    // Validar que todos los campos requeridos estén llenos
+    if (this.nuevoHistorial.claseId && this.nuevoHistorial.fecha) {
+      this.clasesService.addToHistorial(this.nuevoHistorial).subscribe(
+        (data: Historial) => {
+          console.log('Clase registrada:', data);
+          this.resetNuevoHistorial(); // Reiniciar el formulario
+        },
+        (error: any) => console.error(error)
+      );
+    } else {
+      console.error('Por favor, complete todos los campos.'); // Mensaje de error si falta información
+    }
   }
 
   private resetNuevoHistorial() {
