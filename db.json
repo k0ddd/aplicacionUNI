@@ -4,25 +4,31 @@
       "id": 1,
       "name": "Kanye West",
       "email": "kwest@profesor.duocuc.cl",
+      "emailper": "kwest@gmail.com",
       "password": "123456789",
       "rut": "12345678-9",
-      "ocupacion": "Profesor"
+      "ocupacion": "Profesor",
+      "direccion": "calle siempre viva"
     },
     {
       "id": 2,
       "name": "Viktor Vaughn",
       "email": "vvaughn@profesor.duocuc.cl",
+      "emailper": "vvaughn@gmail.com",
       "password": "123456789",
       "rut": "22222222-2",
-      "ocupacion": "Profesor"
+      "ocupacion": "Profesor",
+      "direccion": "los pinguinos"
     },
     {
       "id": 3,
       "name": "Big Boss",
       "email": "bb@profesor.duocuc.cl",
+      "emailper": "bb@gmail.com",
       "password": "123456789",
       "rut": "33333333-3",
-      "ocupacion": "Profesor"
+      "ocupacion": "Profesor",
+      "direccion": "Grove Street"
     },
     {
       "id": 4,

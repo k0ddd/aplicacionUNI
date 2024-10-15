@@ -4,6 +4,7 @@ import { HomePage } from './home.page';
 import { CodigoqrComponent } from '../codigoqr/codigoqr.component';
 import { ReglamentoProfesorComponent } from '../reglamento-profesor/reglamento-profesor.component';
 import { ProfesorPerfilComponent } from '../profesor-perfil/profesor-perfil.component';
+import { HistorialClasesComponent } from '../historial-clases/historial-clases.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
       {
         path:'reglamento-profesor',
         component: ReglamentoProfesorComponent
+      },
+      {
+        path:'historial-clases',
+        component: HistorialClasesComponent
       },
       {
         path:'profesor-perfil',

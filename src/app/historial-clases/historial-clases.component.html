@@ -1,0 +1,18 @@
+<ion-content color="rosado">
+  <ion-accordion-group>
+    <ion-accordion *ngFor="let card of cards" [value]="card.id" toggleIcon="caret-down-circle" toggleIconSlot="start">
+      <ion-item slot="header" color="amarillo">
+        <ion-label>{{ card.titulo }}</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-card color="boton">
+          <ion-card-content>
+            <h2>FECHA: {{ card.fecha }}</h2>
+            <h2>HORA: {{ card.hora }}</h2>
+            <ion-button shape="round" color="success" (click)="actualizarFechaHora(card)">Registrar Asistencia</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>
