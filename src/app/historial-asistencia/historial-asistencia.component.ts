@@ -36,6 +36,7 @@ export class HistorialAsistenciaComponent implements OnInit {
     if (this.usuarioId) {
       const registroAsistencia = {
         idClase: historialItem.idClase,
+        titulo: historialItem.nombreClase,
         fecha: new Date().toLocaleDateString(),
         hora: new Date().toLocaleTimeString(),
         alumnoId: this.usuarioId

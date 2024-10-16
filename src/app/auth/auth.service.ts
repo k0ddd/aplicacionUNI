@@ -6,25 +6,25 @@ import { catchError, map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-
 export class AuthService {
-  private authTokenKey="authToken";
+  private authTokenKey = "authToken";
   private userRoleKey = "userRole"; 
+  private userIdKey = "userId"; // Nueva clave para almacenar userId
   private loggedIn: boolean = false; 
   private apiUrl = 'http://localhost:3000/users'; 
 
   constructor(private http: HttpClient) {}
 
-  storeToken(token:string):void{
+  storeToken(token: string): void {
     localStorage.setItem(this.authTokenKey, token);
   }
 
   storeUserId(id: number): void {
-    localStorage.setItem('userId', id.toString());
+    localStorage.setItem(this.userIdKey, id.toString()); // Almacena userId
   }
   
   getUserId(): number | null {
-    const userId = localStorage.getItem('userId');
+    const userId = localStorage.getItem(this.userIdKey);
     return userId ? Number(userId) : null; // Convierte a número, si existe
   }
   
@@ -32,7 +32,7 @@ export class AuthService {
     localStorage.setItem(this.userRoleKey, role); 
   }
 
-  isAuthenticated():boolean{
+  isAuthenticated(): boolean {
     return !!localStorage.getItem(this.authTokenKey);
   }
 
@@ -51,6 +51,7 @@ export class AuthService {
         if (user) {
           this.storeToken(user.token);
           this.storeUserRole(user.ocupacion);
+          this.storeUserId(user.id); // Almacena el userId al iniciar sesión
           this.loggedIn = true; // Cambia el estado de autenticación
           return user; // Devuelve el usuario autenticado
         } else {
@@ -64,8 +65,9 @@ export class AuthService {
     );
   }
 
-  removeToken():void{
+  removeToken(): void {
     localStorage.removeItem(this.authTokenKey);
     localStorage.removeItem(this.userRoleKey);
+    localStorage.removeItem(this.userIdKey); // Elimina también el userId
   }
 }

@@ -102,38 +102,38 @@
   "clases": [
     {
       "id": "1",
+      "profesorId": 1,
       "idClase": 11,
       "nombreClase": "Producción Musical",
-      "descripcion": "Clases de música con YE y de cómo tirar tu carrera por la borda",
-      "profesorId": 1
+      "descripcion": "Clases de música con YE y de cómo tirar tu carrera por la borda"
     },
     {
       "id": "2",
+      "profesorId": 2,
       "idClase": 22,
       "nombreClase": "Literatura Urbana",
-      "descripcion": "Viktor Vaughn enseña poesía urbana y sus aplicaciones musicales",
-      "profesorId": 2
+      "descripcion": "Viktor Vaughn enseña poesía urbana y sus aplicaciones musicales"
     },
     {
       "id": "3",
+      "profesorId": 3,
       "idClase": 33,
       "nombreClase": "Estrategias de Liderazgo",
-      "descripcion": "Big Boss te guía en tácticas de liderazgo y estrategia",
-      "profesorId": 3
+      "descripcion": "Big Boss te guía en tácticas de liderazgo y estrategia"
     },
     {
       "id": "4",
+      "profesorId": 4,
       "idClase": 44,
       "nombreClase": "Exploración Espacial",
-      "descripcion": "Major Tom explora los misterios del espacio y su impacto cultural",
-      "profesorId": 4
+      "descripcion": "Major Tom explora los misterios del espacio y su impacto cultural"
     },
     {
       "id": "5",
+      "profesorId": 5,
       "idClase": 55,
       "nombreClase": "Diseño de Moda y Cultura",
-      "descripcion": "Tyler Okonma te enseña sobre diseño de moda y expresiones culturales",
-      "profesorId": 5
+      "descripcion": "Tyler Okonma te enseña sobre diseño de moda y expresiones culturales"
     }
   ],
   "historial": [
@@ -150,6 +150,49 @@
       "fecha": "15-10-2024",
       "hora": "19:39:05",
       "profesorId": 1
+    },
+    {
+      "id": "b7c1",
+      "idClase": 11,
+      "fecha": "15-10-2024",
+      "hora": "21:07:47",
+      "profesorId": 1
+    },
+    {
+      "id": "a131",
+      "idClase": 11,
+      "fecha": "15-10-2024",
+      "hora": "21:14:42",
+      "profesorId": 1
+    },
+    {
+      "id": "bc13",
+      "idClase": 22,
+      "fecha": "15-10-2024",
+      "hora": "21:18:54",
+      "profesorId": 2
+    },
+    {
+      "id": "c5ad",
+      "idClase": 44,
+      "fecha": "15-10-2024",
+      "hora": "21:24:27",
+      "profesorId": 4
+    },
+    {
+      "id": "5965",
+      "idClase": 11,
+      "fecha": "15-10-2024",
+      "hora": "21:25:56",
+      "profesorId": 1
+    },
+    {
+      "id": "7c6a",
+      "idClase": 33,
+      "fecha": "15-10-2024",
+      "titulo": "Estrategias de Liderazgo",
+      "hora": "21:30:24",
+      "profesorId": 3
     }
   ],
   "historialAlumno": [
@@ -159,6 +202,20 @@
       "fecha": "15-10-2024",
       "hora": "20:08:30",
       "alumnoId": 1
+    },
+    {
+      "id": "1fd7",
+      "idClase": 22,
+      "fecha": "15-10-2024",
+      "hora": "21:19:32",
+      "alumnoId": 6
+    },
+    {
+      "id": "f3bd",
+      "idClase": 11,
+      "fecha": "15-10-2024",
+      "hora": "21:19:51",
+      "alumnoId": 6
     }
   ]
 }

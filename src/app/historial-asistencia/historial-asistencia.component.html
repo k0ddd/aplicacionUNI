@@ -2,7 +2,7 @@
   <ion-list>
     <ion-item *ngFor="let item of historial">
       <ion-label>
-        <h2>Clase: {{ item.idClase }}</h2>
+        <h2>Clase: {{ item.titulo }}</h2>
         <p>Fecha: {{ item.fecha }} - Hora: {{ item.hora }}</p>
       </ion-label>
       <ion-button color="success" (click)="registrarAsistencia(item)">Registrar Asistencia</ion-button>

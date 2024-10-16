@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HistorialClasesComponent implements OnInit {
   profesorId: number | null = null;
-  cards: { id: string; idClase: number; titulo: string; fecha: string; hora: string }[] = [];
+  cards: { id: string; idClase: number; titulo: string; fecha: string; hora: string}[] = [];
   private apiUrlClases = 'http://localhost:3000/clases';
   private apiUrlHistorial = 'http://localhost:3000/historial';
 
@@ -53,6 +53,7 @@ export class HistorialClasesComponent implements OnInit {
     const registroHistorial = {
       idClase: card.idClase,
       fecha: card.fecha,
+      titulo: card.titulo,
       hora: card.hora,
       profesorId: this.profesorId
     };
