@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./profesor-perfil.component.scss'],
 })
 export class ProfesorPerfilComponent implements OnInit {
-  direccion: string = 'calle siempre viva';
+  direccion: string = '';
   email: string = '';
   emailper: string = '';
 
