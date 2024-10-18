@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import jsQR from 'jsqr';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-camara-alumno',
   templateUrl: './camara-alumno.component.html',
   styleUrls: ['./camara-alumno.component.scss'],
 })
-export class CamaraAlumnoComponent  implements OnInit {
+export class CamaraAlumnoComponent implements OnInit {
   scannedResult: string | null = null;
   imageDataUrl: string | null = null;
 
-  constructor() {}
+  constructor(private alertController: AlertController) {} // Inyecta el AlertController
 
   async takePicture() {
     // Abrir la cámara y capturar una imagen
@@ -31,7 +32,7 @@ export class CamaraAlumnoComponent  implements OnInit {
       const imageElement = new Image();
       imageElement.src = image.dataUrl;
 
-      imageElement.onload = () => {
+      imageElement.onload = async () => {
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');
         if (!context) {
@@ -54,6 +55,9 @@ export class CamaraAlumnoComponent  implements OnInit {
           // Si se detecta un código QR, mostrar el contenido
           this.scannedResult = code.data;
           console.log('Código QR detectado:', code.data);
+
+          // Mostrar alerta con el contenido del código QR
+          await this.showAlert('Escaneo exitoso', code.data);
         } else {
           console.log('No se detectó ningún código QR');
           this.scannedResult = 'No se detectó ningún código QR';
@@ -64,7 +68,15 @@ export class CamaraAlumnoComponent  implements OnInit {
     }
   }
 
+  async showAlert(header: string, message: string) {
+    const alert = await this.alertController.create({
+      header: header,
+      message: message, // Solo el contenido del código QR
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
 
   ngOnInit() {}
-
 }
