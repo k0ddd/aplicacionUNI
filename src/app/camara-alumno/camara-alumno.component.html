@@ -1,0 +1,18 @@
+<ion-header color="rosado">
+  <ion-toolbar>
+    <ion-title>Marcar Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="rosado">
+  <div style="text-align: center; margin-bottom: 20px;">
+    <ion-button color="success" (click)="takePicture()">
+      Escanear Código QR
+    </ion-button>
+  </div>
+
+  <div *ngIf="scannedResult" style="text-align: justify; padding: 0 15px;">
+    <h2 style="text-align: center;">Resultado del Escaneo:</h2>
+    <p>{{ scannedResult }}</p>
+  </div>
+</ion-content>

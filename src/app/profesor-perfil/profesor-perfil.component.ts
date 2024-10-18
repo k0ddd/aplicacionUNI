@@ -7,7 +7,9 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./profesor-perfil.component.scss'],
 })
 export class ProfesorPerfilComponent implements OnInit {
+
   user: any; // Para almacenar la información del usuario
+ 
 
   constructor(private http: HttpClient) {}
 
