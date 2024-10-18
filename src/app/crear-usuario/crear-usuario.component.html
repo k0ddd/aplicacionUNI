@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Administrar Cuentas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Formulario para agregar o editar una cuenta -->
+  <form (submit)="guardarCuenta()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="cuenta.name" name="name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input [(ngModel)]="cuenta.email" name="email" type="email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="cuenta.password" name="password" type="password" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">RUT</ion-label>
+      <ion-input [(ngModel)]="cuenta.rut" name="rut" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Ocupación</ion-label>
+      <ion-select [(ngModel)]="cuenta.ocupacion" name="ocupacion" required>
+        <ion-select-option value="Profesor">Profesor</ion-select-option>
+        <ion-select-option value="Alumno">Alumno</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="block" type="submit">
+      {{ cuenta.id ? 'Actualizar Cuenta' : 'Crear Cuenta' }}
+    </ion-button>
+  </form>
+
+  <!-- Lista de cuentas -->
+  <ion-list>
+    <ion-item *ngFor="let cuenta of cuentas">
+      <ion-label>
+        <h2>{{ cuenta.name }} ({{ cuenta.ocupacion }})</h2>
+        <p>Email: {{ cuenta.email }} - RUT: {{ cuenta.rut }}</p>
+      </ion-label>
+      <ion-button color="warning" (click)="editarCuenta(cuenta)">Editar</ion-button>
+      <ion-button color="danger" (click)="eliminarCuenta(cuenta.id)">Eliminar</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

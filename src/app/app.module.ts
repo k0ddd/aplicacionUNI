@@ -14,9 +14,13 @@ import { RecuperarContrasenaComponent } from './recuperar-contrasena/recuperar-c
 import { FormsModule } from '@angular/forms';
 import { HistorialClasesComponent } from './historial-clases/historial-clases.component';
 import { HistorialAsistenciaComponent } from './historial-asistencia/historial-asistencia.component'
+import { CrearClaseComponent } from './crear-clase/crear-clase.component';
+import { CrearUsuarioComponent } from './crear-usuario/crear-usuario.component';
 
 @NgModule({
-  declarations: [AppComponent, CodigoqrComponent, ReglamentoProfesorComponent, ProfesorPerfilComponent, RecuperarContrasenaComponent, HistorialClasesComponent, HistorialAsistenciaComponent],
+  declarations: [AppComponent, CodigoqrComponent, ReglamentoProfesorComponent, ProfesorPerfilComponent, RecuperarContrasenaComponent, HistorialClasesComponent, HistorialAsistenciaComponent,
+    CrearClaseComponent, CrearUsuarioComponent
+  ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, RouterModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent]

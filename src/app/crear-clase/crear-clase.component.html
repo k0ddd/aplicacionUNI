@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Administrar Clases</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Formulario para agregar o editar clase -->
+  <form (submit)="guardarClase()">
+    <ion-item>
+      <ion-label position="floating">Nombre de la Clase</ion-label>
+      <ion-input [(ngModel)]="clase.nombreClase" name="nombreClase" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-input [(ngModel)]="clase.descripcion" name="descripcion" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Profesor ID</ion-label>
+      <ion-input [(ngModel)]="clase.profesorId" name="profesorId" type="number" required></ion-input>
+    </ion-item>
+    
+    <ion-button expand="block" type="submit"> 
+      {{ clase.id ? 'Actualizar Clase' : 'Crear Clase' }}
+    </ion-button>
+  </form>
+
+  <!-- Lista de clases actuales -->
+  <ion-list>
+    <ion-item *ngFor="let clase of clases">
+      <ion-label>
+        <h2>{{ clase.nombreClase }}</h2>
+        <p>{{ clase.descripcion }}</p>
+      </ion-label>
+      <ion-button color="warning" (click)="editarClase(clase)">Editar</ion-button>
+      <ion-button color="danger" (click)="eliminarClase(clase.id)">Eliminar</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
