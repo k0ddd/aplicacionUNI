@@ -7,6 +7,7 @@ import { catchError, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
+  private user: any;
   private authTokenKey = "authToken";
   private userRoleKey = "userRole"; 
   private userIdKey = "userId"; // Nueva clave para almacenar userId
@@ -19,6 +20,14 @@ export class AuthService {
     localStorage.setItem(this.authTokenKey, token);
   }
 
+  setUser(user: any) {
+    this.user = user; // Guarda el objeto del usuario completo
+  }
+  
+  getUser() {
+    return this.user; // Devuelve el usuario completo
+  }
+  
   storeUserId(id: number): void {
     localStorage.setItem(this.userIdKey, id.toString()); // Almacena userId
   }
@@ -51,6 +60,7 @@ export class AuthService {
         if (user) {
           this.storeToken(user.token);
           this.storeUserRole(user.ocupacion);
+          this.setUser(user); // Almacena el usuario completo
           this.storeUserId(user.id); // Almacena el userId al iniciar sesión
           this.loggedIn = true; // Cambia el estado de autenticación
           return user; // Devuelve el usuario autenticado
