@@ -1,0 +1,35 @@
+ion-list {
+    padding: 5px; /* Añade un poco de espacio a los lados */
+  }
+  
+  ion-item {
+    --background: #FAC2EE;
+    border-radius: 10px;
+
+    padding: 11px;
+  }
+  
+  ion-label h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #224468; /* Color del título */
+    margin: 0;
+  }
+  
+  ion-label p {
+    font-size: 1rem;
+    color: #000000; /* Color del texto de fecha y hora */
+    margin: 8px 0 0;
+  }
+  
+  ion-button {
+    --border-radius: 20px; /* Bordes redondeados para el botón */
+    margin-left: auto; /* Alineación automática hacia la derecha */
+  }
+  
+  ion-button[color="success"] {
+    --background: #4caf50; /* Verde para el botón de éxito */
+    --color: white; /* Texto blanco en el botón */
+    --box-shadow: 0 4px 10px rgba(76, 175, 80, 0.5); /* Sombra suave para el botón */
+    padding: 0 20px;
+  }

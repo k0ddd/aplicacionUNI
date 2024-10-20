@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../auth/auth.service';// Ajusta la ruta del servicio según corresponda
 
 @Component({
   selector: 'app-profesor-perfil',
@@ -7,22 +7,16 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./profesor-perfil.component.scss'],
 })
 export class ProfesorPerfilComponent implements OnInit {
+  userName: string = '';
+  userEmail: string = '';
 
-  user: any; // Para almacenar la información del usuario
- 
-
-  constructor(private http: HttpClient) {}
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
-    const userId = '3'; // Cambia esto por el ID que necesites
-    this.getUserById(userId);
-  }
-
-  getUserById(id: string) {
-    this.http.get(`http://localhost:3000/users/${id}`).subscribe(data => {
-      this.user = data; // Asigna la respuesta del API al usuario
-    }, error => {
-      console.error('Error al obtener los datos del usuario', error);
-    });
+    const user = this.authService.getUser(); // Obtén el usuario desde AuthService
+    if (user) {
+      this.userName = user.name; // Guarda el nombre del usuario
+      this.userEmail = user.email; // Guarda el email del usuario
+    }
   }
 }
