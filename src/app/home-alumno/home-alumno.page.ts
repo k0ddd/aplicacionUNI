@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home-alumno',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HomeAlumnoPage  {
   
-    constructor(private router: Router) {
+    constructor(private router: Router,public alertaSalida: AlertController) {
       this.router.navigate(['home-alumno/historial-asistencia'])
     }
     segmentChanged($event: any){
@@ -16,5 +17,15 @@ export class HomeAlumnoPage  {
       let direction=$event.detail.value
       this.router.navigate(['home-alumno/'+direction])
     }
+
+    async presentAlert(){
+      const alert = await this.alertaSalida.create({
+        header: 'USTED HA CERRADO SESION',
+        message: 'Para volver a iniciar sesion reingrese sus credenciales',
+        buttons: ['OK']
+      });
+      await alert.present();
+  }
+  
   }
   

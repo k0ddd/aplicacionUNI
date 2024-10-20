@@ -1,7 +1,23 @@
 <ion-header class="homeheader" [translucent]="false"> 
   <h1 class="titulo ion-text-center">VIVO DUOC</h1>
   <ion-img class="hl" src="https://pngimg.com/uploads/Half-Life/Half-Life_PNG76.png"></ion-img>
-  </ion-header>
+  
+  <!-- Botón para activar el popover con clase personalizada -->
+  <ion-button color="rosado" slot="end" id="popover-button" class="popover-button">
+    <ion-icon name="person-circle-sharp"></ion-icon>
+  </ion-button> 
+
+  <ion-popover trigger="popover-button" [dismissOnSelect]="true">
+    <ng-template>
+      <ion-content>
+        <ion-list>
+          <ion-item [routerLink]="['/login']" (click)="presentAlert()" [button]="true" [detail]="false">Cerrar Sesion</ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-popover>
+</ion-header>
+
   <ion-toolbar color="rosado">
     <ion-title class="titulo ion-text-center">Bienvenide {{ usuarioNombre }}</ion-title> <!-- Cambiado aquí -->
   </ion-toolbar>
