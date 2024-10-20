@@ -36,7 +36,8 @@ export class HistorialClasesComponent implements OnInit {
           idClase: clase.idClase,
           titulo: clase.nombreClase,
           fecha: '',  // Campos fecha y hora vacíos hasta que el profesor registre el historial
-          hora: ''
+          hora: '',
+          profesorId: null
         }));
       },
       error: (error) => {

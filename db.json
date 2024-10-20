@@ -134,6 +134,12 @@
       "idClase": 55,
       "nombreClase": "Diseño de Moda y Cultura",
       "descripcion": "Tyler Okonma te enseña sobre diseño de moda y expresiones culturales"
+    },
+    {
+      "id": "0fd2",
+      "nombreClase": "GTA SA",
+      "descripcion": "GTA SAN ANDREAS HOW TO BE TOUGH",
+      "profesorId": 5
     }
   ],
   "historial": [
@@ -209,6 +215,22 @@
       "titulo": "Producción Musical",
       "hora": "17:58:51",
       "profesorId": 1
+    },
+    {
+      "id": "2dc9",
+      "idClase": 33,
+      "fecha": "20-10-2024",
+      "titulo": "Estrategias de Liderazgo",
+      "hora": "19:51:03",
+      "profesorId": 3
+    },
+    {
+      "id": "c046",
+      "idClase": 33,
+      "fecha": "20-10-2024",
+      "titulo": "Estrategias de Liderazgo",
+      "hora": "19:51:13",
+      "profesorId": 3
     }
   ],
   "historialAlumno": [

@@ -9,7 +9,9 @@ import { AlertController } from '@ionic/angular';
 })
 export class HomeAdminPage {
 
-  constructor(private router: Router, public alertaSalida:AlertController) {}
+  constructor(private router: Router, public alertaSalida:AlertController) {
+    this.router.navigate(['home-admin/crear-clase'])
+  }
 
   // Controla la navegación entre las secciones
   segmentChanged($event: any){
