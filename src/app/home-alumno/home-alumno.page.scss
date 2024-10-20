@@ -12,6 +12,12 @@
       color: var(--ion-color-texto);
       font-family: "Lucida Console", Courier, monospace;
   }
-  
+
+  .popover-button {
+    position: absolute;
+    top: 10px;  /* Ajusta el valor según lo necesites */
+    right: 10px; /* Ajusta el valor según lo necesites */
+  }
+
   
   

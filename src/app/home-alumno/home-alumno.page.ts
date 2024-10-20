@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { AuthService } from '../auth/auth.service';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home-alumno',
@@ -11,7 +13,7 @@ export class HomeAlumnoPage  {
 
   usuarioNombre: string = ''; // Para almacenar el nombre del usuario
   
-  constructor(private router: Router, private authService: AuthService) {
+  constructor(private router: Router, private authService: AuthService,public alertaSalida: AlertController) {
     const user = this.authService.getUser(); // Obtiene el usuario desde el servicio
     if (user) {
       this.usuarioNombre = user.name; // Asigna el nombre del usuario
@@ -24,5 +26,15 @@ export class HomeAlumnoPage  {
       let direction=$event.detail.value
       this.router.navigate(['home-alumno/'+direction])
     }
+
+    async presentAlert(){
+      const alert = await this.alertaSalida.create({
+        header: 'USTED HA CERRADO SESION',
+        message: 'Para volver a iniciar sesion reingrese sus credenciales',
+        buttons: ['OK']
+      });
+      await alert.present();
+  }
+  
   }
   
