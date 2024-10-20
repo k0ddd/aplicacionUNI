@@ -1,18 +1,22 @@
-<ion-content color="rosado">
-<ion-card color="amarillo">
-  <ion-card-header>
-    <ion-card-title>
-      <h1 class="fuente ion-text-center">Recuperar Contraseña</h1>
-    </ion-card-title>
-  </ion-card-header>
-  <ion-card-content>
-    <form (ngSubmit)="recuperarContrasena()">
-      <ion-item color="amarillo">
-        <ion-label position="floating">Correo Electrónico</ion-label>
-        <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
-      </ion-item>
-      <ion-button class="fuente" expand="block" type="submit" color="boton">Enviar Recuperación</ion-button>
-    </form>
-  </ion-card-content>
+<ion-content color="rosado"> 
+  <ion-card color="amarillo">
+    <ion-card-header class="recuperarheader">
+      <div class="header-container">
+        <h1 class="fuente ion-text-center">  Recuperar Contraseña</h1>
+        <ion-button fill="clear" (click)="dismissModal()">
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <form (ngSubmit)="recuperarContrasena()">
+        <ion-item color="amarillo">
+          <ion-label position="floating">Correo Electrónico</ion-label>
+          <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+        </ion-item>
+        <ion-button class="fuente" expand="block" type="submit" color="boton">Enviar Recuperación</ion-button>
+      </form>
+    </ion-card-content>
   </ion-card>
-
+</ion-content>

@@ -4,15 +4,24 @@
       <ion-item slot="header" color="amarillo">
         <ion-label>{{ card.titulo }}</ion-label>
       </ion-item>
-      <div class="ion-padding" slot="content">
-        <ion-card color="boton">
-          <ion-card-content>
+      <div class="ion-padding" slot="content" color="rosado">
+        <ion-card color="rosado">
+          <ion-card-content color="rosado">
             <h2>FECHA: {{ card.fecha }}</h2>
             <h2>HORA: {{ card.hora }}</h2>
-            <ion-button shape="round" color="primary" (click)="generarHistorialClase(card)">Generar Historial</ion-button>
+            <ion-button shape="round" color="boton" (click)="generarHistorialClase(card)">Generar Historial</ion-button>
           </ion-card-content>
         </ion-card>
       </div>
     </ion-accordion>
   </ion-accordion-group>
-</ion-content>
+
+    <ion-card color="amarillo">
+      <ion-card-title class="ion-text-center">Reglamento academico</ion-card-title>
+      <ion-card-header>
+        <h5 class="texto-asistencia">Por reglamento académico tienes que tener un 70% de Asistencia en cada uno de tus
+          ramos para
+          aprobar el curso, en esta sección podrás revisar el avance y así no repetir por no ir a
+          clases.</h5>
+        <ion-card-title class="ion-text-center"></ion-card-title>
+      
