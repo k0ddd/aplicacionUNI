@@ -97,6 +97,14 @@
       "password": "admin",
       "ocupacion": "Administrator",
       "rol": "admin"
+    },
+    {
+      "id": "db67",
+      "name": "Cubo de Hielo",
+      "email": "ch@profesor.duocuc.cl",
+      "password": "123",
+      "rut": "123",
+      "ocupacion": "Profesor"
     }
   ],
   "clases": [

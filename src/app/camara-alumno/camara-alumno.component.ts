@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
-import jsQR from 'jsqr';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera'; //capacitor para abrir camara en celular
+import jsQR from 'jsqr'; //libreria de lector de QR
 import { AlertController } from '@ionic/angular';
 
 @Component({

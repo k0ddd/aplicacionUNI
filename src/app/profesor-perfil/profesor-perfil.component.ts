@@ -14,7 +14,7 @@ export class ProfesorPerfilComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    const userId = '3'; // Cambia esto por el ID que necesites
+    const userId = ''; // Cambia esto por el ID que necesites
     this.getUserById(userId);
   }
 
