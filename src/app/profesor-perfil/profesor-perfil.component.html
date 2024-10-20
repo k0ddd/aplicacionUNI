@@ -1,7 +1,7 @@
 <ion-content color="rosado">
-  <ion-card *ngIf="user">
+  <ion-card *ngIf="userName && userEmail">
     <ion-card-header>
-      <ion-card-title>{{ user.name }}</ion-card-title>
+      <ion-card-title>{{ userName }}</ion-card-title>
       <ion-card-subtitle>Perfil DuocUC</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
@@ -12,7 +12,7 @@
           </ion-thumbnail>
         </ion-item>
         <ion-item>
-          <ion-label>Correo DuocUC: {{ user.email }}</ion-label>
+          <ion-label>Correo DuocUC: {{ userEmail }}</ion-label> <!-- Muestra el email aquí -->
         </ion-item>
       </ion-list>
     </ion-card-content>
