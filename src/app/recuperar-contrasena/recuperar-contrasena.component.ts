@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, ModalController} from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class RecuperarContrasenaComponent  implements OnInit {
   email: string = '';
 
-  constructor(private alertController: AlertController, private router: Router) { }
+  constructor(private alertController: AlertController, private router: Router,private modalController: ModalController) { }
 
   ngOnInit() {}
   async recuperarContrasena() {
@@ -33,6 +33,10 @@ export class RecuperarContrasenaComponent  implements OnInit {
     }
   }
 
+  // Método para cerrar el modal
+  dismissModal() {
+    this.modalController.dismiss();  // Esto cierra el modal
+  }
 }
 
 

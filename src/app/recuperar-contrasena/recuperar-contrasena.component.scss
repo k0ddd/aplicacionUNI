@@ -1,30 +1,53 @@
 ion-card {
-    max-width: 400px;
-    margin: auto;
+  max-width: 400px;
+  margin: auto;
 }
-  
-  ion-button {
-    margin-top: 20px;
+
+ion-button {
+  margin-top: 20px;
 }
 
 .recuperarheader {
-    background-color: var(--ion-color-rosado); /* Color de fondo oscuro */
-    padding: 10px;
-  }
+  background-color: var(--ion-color-amarillo); /* Color de fondo oscuro */
+  padding: 10px
   
-  .hl1 {
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;}
-  
-  .titulo{
-      color: var(--ion-color-texto);
-      font-family: "Lucida Console", Courier, monospace;
-  }
+  ;
+}
 
-  .fuente{
-    font-family: "Lucida Console", Courier, monospace;
-  }
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Espacio entre el título y el botón */
+  align-items: center; /* Centra verticalmente el contenido */
+}
+
+.header-container h1 {
+  margin: 0; /* Elimina el margen por defecto del h1 */
+  font-size: 1.5em; /* Ajusta el tamaño de la fuente si es necesario */
+  color: var(--ion-color-texto); /* Asegúrate de que el color se mantenga consistente */
+}
+
+.hl1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.titulo {
+  color: var(--ion-color-texto);
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+.fuente {
+  font-family: "Lucida Console", Courier, monospace;
+  margin-top: 1rem;
   
-  
+
+}
+
+/* Estilos específicos para el botón */
+ion-button {
+  margin-top: 0; /* Mantiene el margen de arriba para el botón */
+  --ion-button-padding: 0; /* Elimina el padding del botón */
+}
+
   

@@ -15,7 +15,7 @@ export class HomePage {
     if (user) {
       this.usuarioNombre = user.name; // Asigna el nombre del usuario
     }
-    this.router.navigate(['home/reglamento-profesor']);
+    this.router.navigate(['home/historial-clases']);
   }
     
 
