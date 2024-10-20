@@ -24,7 +24,7 @@ export class HistorialAsistenciaComponent implements OnInit {
     // Obtener el historial de clases desde el backend
     this.http.get<any[]>(this.apiUrlHistorial).subscribe({
       next: (data) => {
-        this.historial = data; // Asignar el historial de clases al array `historial`
+        this.historial = data; 
       },
       error: (error) => {
         console.error('Error al cargar historial:', error);

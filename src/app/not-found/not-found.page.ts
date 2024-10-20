@@ -11,6 +11,6 @@ export class NotFoundPage {
   constructor(private router: Router) { }
 
   irALogin() {
-    this.router.navigate(['/login']); // Redirige a la página de login
+    this.router.navigate(['/login']); 
   }
 }

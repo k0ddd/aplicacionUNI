@@ -22,7 +22,7 @@ export class HistorialClasesComponent implements OnInit {
 
   ngOnInit() {
     // Obtener el ID del profesor autenticado directamente
-    this.profesorId = this.authService.getUserId(); // Asegúrate de que getUserId() devuelva el ID como string
+    this.profesorId = this.authService.getUserId(); 
     this.cargarClases();
   }
 
