@@ -24,7 +24,11 @@ export class HistorialAsistenciaComponent implements OnInit {
     // Obtener el historial de clases desde el backend
     this.http.get<any[]>(this.apiUrlHistorial).subscribe({
       next: (data) => {
-        this.historial = data; 
+        // Agrega la propiedad asistenciaRegistrada como false inicialmente
+        this.historial = data.map(item => ({
+          ...item,
+          asistenciaRegistrada: false
+        }));
       },
       error: (error) => {
         console.error('Error al cargar historial:', error);
@@ -46,6 +50,8 @@ export class HistorialAsistenciaComponent implements OnInit {
       this.http.post(this.apiUrlHistorialAlumno, registroAsistencia).subscribe({
         next: (response) => {
           console.log('Asistencia registrada:', response);
+          // Actualizar el estado del botón
+          historialItem.asistenciaRegistrada = true;
         },
         error: (error) => {
           console.error('Error al registrar asistencia:', error);
