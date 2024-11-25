@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { CamaraAlumnoComponent } from './camara-alumno/camara-alumno.component';
-
+import { QRCodeModule } from 'angularx-qrcode';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CodigoqrComponent } from './codigoqr/codigoqr.component';
@@ -21,7 +21,7 @@ import { CrearUsuarioComponent } from './crear-usuario/crear-usuario.component';
 
 @NgModule({
   declarations: [AppComponent, CodigoqrComponent,AlumnoPerfilComponent,CamaraAlumnoComponent, ProfesorPerfilComponent, RecuperarContrasenaComponent, HistorialClasesComponent, HistorialAsistenciaComponent, CrearClaseComponent, CrearUsuarioComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, RouterModule, HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, RouterModule, HttpClientModule, QRCodeModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent]
 })

@@ -239,6 +239,94 @@
       "titulo": "Estrategias de Liderazgo",
       "hora": "19:51:13",
       "profesorId": 3
+    },
+    {
+      "id": "9654",
+      "idClase": 11,
+      "fecha": "24/11/2024",
+      "titulo": "Producción Musical",
+      "hora": "22:08:13",
+      "profesorId": 1
+    },
+    {
+      "id": "6a89",
+      "idClase": 123,
+      "fecha": "24/11/2024",
+      "titulo": "Matemáticas",
+      "hora": "22:26:44",
+      "profesorId": 1
+    },
+    {
+      "id": "d894",
+      "idClase": 11,
+      "fecha": "24/11/2024",
+      "titulo": "Producción Musical",
+      "hora": "22:27:00",
+      "profesorId": 1
+    },
+    {
+      "id": "bf58",
+      "idClase": 11,
+      "fecha": "24/11/2024",
+      "titulo": "Producción Musical",
+      "hora": "22:33:20",
+      "profesorId": 1
+    },
+    {
+      "id": "2917",
+      "idClase": 11,
+      "fecha": "24/11/2024",
+      "titulo": "Producción Musical",
+      "hora": "22:34:08",
+      "profesorId": 1
+    },
+    {
+      "id": "a39b",
+      "idClase": 11,
+      "fecha": "24/11/2024",
+      "titulo": "Producción Musical",
+      "hora": "22:34:14",
+      "profesorId": 1
+    },
+    {
+      "id": "8d29",
+      "idClase": 11,
+      "fecha": "24/11/2024",
+      "titulo": "Producción Musical",
+      "hora": "22:34:17",
+      "profesorId": 1
+    },
+    {
+      "id": "e66d",
+      "idClase": 11,
+      "fecha": "24/11/2024",
+      "titulo": "Producción Musical",
+      "hora": "22:34:41",
+      "profesorId": 1
+    },
+    {
+      "id": "6f5c",
+      "idClase": 11,
+      "fecha": "24/11/2024",
+      "titulo": "Producción Musical",
+      "hora": "22:35:59",
+      "profesorId": 1
+    },
+    {
+      "id": "c5cf",
+      "idClase": 11,
+      "fecha": "24/11/2024",
+      "titulo": "Producción Musical",
+      "hora": "22:36:22",
+      "profesorId": 1
+    },
+    {
+      "id": "08f7",
+      "idClase": 11,
+      "fecha": "24/11/2024",
+      "titulo": "Producción Musical",
+      "hora": "22:36:26",
+      "profesorId": 1
     }
   ],
   "historialAlumno": [
