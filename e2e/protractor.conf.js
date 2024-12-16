@@ -1,13 +1,13 @@
 exports.config = {
     allScriptsTimeout: 11000,
     specs: [
-      './src/**/*.e2e-spec.ts'  // Define la ruta de los archivos de especificación
+      './src/**/*.e2e-spec.ts' 
     ],
     capabilities: {
-      browserName: 'chrome'  // Configura el navegador (puedes cambiarlo si es necesario)
+      browserName: 'chrome' 
     },
-    directConnect: true,  // Permite que Protractor se conecte directamente al navegador sin WebDriver
-    baseUrl: 'http://localhost:3000/',  // Asegúrate de que coincida con la URL donde se ejecuta tu aplicación
+    directConnect: true,  
+    baseUrl: 'http://localhost:3000/', 
     framework: 'jasmine',
     jasmineNodeOpts: {
       showColors: true,
@@ -16,7 +16,7 @@ exports.config = {
     },
     onPrepare() {
       require('ts-node').register({
-        project: 'e2e/tsconfig.e2e.json'  // Configura TypeScript para las pruebas
+        project: 'e2e/tsconfig.e2e.json' 
       });
     }
   };
