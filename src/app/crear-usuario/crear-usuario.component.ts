@@ -17,7 +17,7 @@ export class CrearUsuarioComponent implements OnInit {
     ocupacion: 'Alumno'
   }; // Modelo para crear/editar usuarios
 
-  private apiUrl = 'http://localhost:3000/users'; // URL de la API para usuarios
+  private apiUrl = 'https://60349d2e-6643-4703-be2d-a4016e0aa87b-00-m1hesvg9ynjh.riker.replit.dev/users'; // URL de la API para usuarios
 
   constructor(private http: HttpClient) {}
 

@@ -27,5 +27,6 @@ export class HomeAlumnoPage  {
       await alert.present();
   }
   
+  
   }
   

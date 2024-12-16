@@ -359,6 +359,54 @@
       "titulo": "Estrategias de Liderazgo",
       "hora": "19:35:52",
       "profesorId": 3
+    },
+    {
+      "id": "66a7",
+      "idClase": 33,
+      "fecha": "16-12-2024",
+      "titulo": "Estrategias de Liderazgo",
+      "hora": "19:54:19",
+      "profesorId": 3
+    },
+    {
+      "id": "233a",
+      "idClase": 33,
+      "fecha": "16-12-2024",
+      "titulo": "Estrategias de Liderazgo",
+      "hora": "19:54:38",
+      "profesorId": 3
+    },
+    {
+      "id": "c0f3",
+      "idClase": 33,
+      "fecha": "16-12-2024",
+      "titulo": "Estrategias de Liderazgo",
+      "hora": "19:58:36",
+      "profesorId": 3
+    },
+    {
+      "id": "1af3",
+      "idClase": 33,
+      "fecha": "16-12-2024",
+      "titulo": "Estrategias de Liderazgo",
+      "hora": "20:02:15",
+      "profesorId": 3
+    },
+    {
+      "id": "0cb5",
+      "idClase": 33,
+      "fecha": "16-12-2024",
+      "titulo": "Estrategias de Liderazgo",
+      "hora": "20:06:58",
+      "profesorId": 3
+    },
+    {
+      "id": "acf7",
+      "idClase": 33,
+      "fecha": "16-12-2024",
+      "titulo": "Estrategias de Liderazgo",
+      "hora": "20:07:06",
+      "profesorId": 3
     }
   ],
   "historialAlumno": [

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,8 +11,15 @@ import { Router } from '@angular/router';
 export class HistorialClasesComponent implements OnInit {
   profesorId: number | null = null;
   cards: { id: string; idClase: number; titulo: string; fecha: string; hora: string}[] = [];
-  private apiUrlClases = 'http://localhost:3000/clases';
-  private apiUrlHistorial = 'http://localhost:3000/historial';
+  private apiUrlClases = 'https://60349d2e-6643-4703-be2d-a4016e0aa87b-00-m1hesvg9ynjh.riker.replit.dev/clases';
+  private apiUrlHistorial = 'https://60349d2e-6643-4703-be2d-a4016e0aa87b-00-m1hesvg9ynjh.riker.replit.dev/historial';
+
+    httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      })
+    }
 
   constructor(
     private authService: AuthService,
