@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-crear-clase',
@@ -17,8 +17,15 @@ export class CrearClaseComponent implements OnInit {
   };
   
 
-  private apiUrl = 'http://localhost:3000/clases'; // URL de la API
+  private apiUrl = 'https://60349d2e-6643-4703-be2d-a4016e0aa87b-00-m1hesvg9ynjh.riker.replit.dev/clases'; // URL de la API
 
+    httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      })
+    }
+    
   constructor(private http: HttpClient) {}
 
   ngOnInit() {

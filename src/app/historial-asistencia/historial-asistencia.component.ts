@@ -10,8 +10,8 @@ import { HttpClient } from '@angular/common/http';
 export class HistorialAsistenciaComponent implements OnInit {
   usuarioId: number | null = null;
   historial: any[] = [];
-  private apiUrlHistorial = 'http://localhost:3000/historial';
-  private apiUrlHistorialAlumno = 'http://localhost:3000/historialAlumno';
+  private apiUrlHistorial = 'https://60349d2e-6643-4703-be2d-a4016e0aa87b-00-m1hesvg9ynjh.riker.replit.dev/historial';
+  private apiUrlHistorialAlumno = 'https://60349d2e-6643-4703-be2d-a4016e0aa87b-00-m1hesvg9ynjh.riker.replit.dev/historialAlumno';
 
   constructor(private authService: AuthService, private http: HttpClient) {}
 

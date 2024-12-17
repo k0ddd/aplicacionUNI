@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,7 +12,14 @@ export class CodigoqrComponent implements OnInit {
   profesorId: number | null = null;
   qrData: string = ''; // Datos del código QR, inicialmente vacíos
   cards: any[] = []; // Datos de las clases
-  private apiUrlClases = 'http://localhost:3000/clases'; // URL para obtener las clases
+  private apiUrlClases = 'https://60349d2e-6643-4703-be2d-a4016e0aa87b-00-m1hesvg9ynjh.riker.replit.dev/clases'; // URL para obtener las clases
+
+    httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      })
+    }
 
   constructor(
     private authService: AuthService,
@@ -68,7 +75,7 @@ export class CodigoqrComponent implements OnInit {
     };
 
     // Guardar el historial en la base de datos (opcional)
-    const apiUrlHistorial = 'http://localhost:3000/historial';
+    const apiUrlHistorial = 'https://60349d2e-6643-4703-be2d-a4016e0aa87b-00-m1hesvg9ynjh.riker.replit.dev/historial';
     this.http.post(apiUrlHistorial, registroHistorial).subscribe({
       next: (response) => {
         console.log('Historial de clase registrado:', response);
